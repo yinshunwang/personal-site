@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留言板 - Felix</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">Felix<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="message.html" class="active">留言板</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">💬 给我留言</h2>
+            <p class="muted">欢迎在下面写下你的想法，留言会保存在你的浏览器本地（localStorage）。</p>
+
+            <!-- 留言表单 -->
+            <div class="card message-form">
+                <div class="form-row">
+                    <label for="nickname">昵称</label>
+                    <input type="text" id="nickname" placeholder="请输入你的昵称">
+                </div>
+                <div class="form-row">
+                    <label for="content">留言内容</label>
+                    <textarea id="content" rows="4" placeholder="说点什么吧…"></textarea>
+                </div>
+                <button class="btn" onclick="addMessage()">提交留言</button>
+                <button class="btn btn-secondary" onclick="clearMessages()">清空留言</button>
+            </div>
+
+            <!-- 留言列表 -->
+            <h3 class="list-title">全部留言（<span id="msg-count">0</span>）</h3>
+            <div id="message-list"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Felix · 南京审计大学《网页设计》课程作业</p>
+        </div>
+    </footer>
+
+    <script src="js/message.js"></script>
+</body>
+</html>
